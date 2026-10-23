@@ -1,5 +1,5 @@
 # VigiDrive: Driver Fatigue Detection System
-Project By: Brunda Varshini Katapali (group of 3 members)
+**Project By: Brunda Varshini Katapali (group of 3 members)**
 
 A real-time driver alertness monitor built for a Deep Learning and CNN course. It reads a webcam feed and classifies the driver as **Alert**, **Low Vigilant** or **Drowsy**, then shows live alerts and an end-of-session summary.
 
