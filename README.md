@@ -5,7 +5,7 @@ A real-time driver alertness monitor built for a Deep Learning and CNN course. I
 
 > **Student project.** This is a prototype for learning and demonstration. It is not a safety product and must not be relied on while driving.
 
-## How it works
+## How it Works
 
 - **Classifier:** a MobileNetV2 CNN (transfer learning, trained on the D3S dataset with leave-one-subject-out evaluation). EfficientNetB0 and ResNet50V2 were compared in the report.
 - **Facial features:** dlib's 68-point landmarks give the Eye Aspect Ratio (EAR), Mouth Aspect Ratio (MAR) and head pose for every frame.
@@ -15,7 +15,7 @@ A real-time driver alertness monitor built for a Deep Learning and CNN course. I
 
 The full report (method, results and limitations) is in this repository.
 
-## Repository layout
+## Repository Layout
 
 ```
 src/App.jsx        React frontend (all screens)
@@ -24,13 +24,13 @@ public/            static files
 package.json       frontend dependencies
 ```
 
-## What is not included
+## What is not Included?
 
 | File | Why | Where to get it |
 |---|---|---|
-| `MobileNetV2_fold0_best.keras` | trained model weights (about 26 MB, too large for the repo) | download it from the [Releases](../../releases) page and put it next to `backend.py` |
-| `shape_predictor_68_face_landmarks.dat` | dlib model, separate licence | download from http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2 and unzip |
-| D3S dataset | belongs to its authors, not redistributed here | https://github.com/bindujiit/Driver-Drowsiness-Dataset-D3S- |
+| `MobileNetV2_fold0_best.keras` | Trained model weights (about 26 MB, too large for the repo) | Download it from the [Releases](../../releases) page and put it next to `backend.py` |
+| `shape_predictor_68_face_landmarks.dat` | dlib model, separate licence | Download from http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2 and unzip |
+| D3S dataset | Belongs to its authors, not redistributed here | https://github.com/bindujiit/Driver-Drowsiness-Dataset-D3S- |
 
 Put both model files next to `backend.py`.
 
@@ -68,11 +68,11 @@ npm start
 
 The app opens at http://localhost:3000. Allow camera access when asked.
 
-### Running the backend in Google Colab
+### Running the Backend in Google Colab
 
 The original demo ran the backend in Colab and exposed it with an [ngrok](https://ngrok.com) tunnel, because dlib and TensorFlow were hard to install on a Windows laptop. If you do the same, put your own ngrok URL in `.env.local` as `REACT_APP_BACKEND_URL`. Never commit your ngrok token or URL.
 
-## My part and the team
+## Team Contribution
 
 This was a group project. I (Brunda Varshini Katapalli) built the **React frontend** (all screens, camera handling, live monitoring and the session summary), the **FastAPI backend** (landmark features, decision fusion, Grad-CAM and the `/predict` endpoint), the Colab and ngrok deployment, and the system flowchart. My teammates built the dataset pipeline and trained and evaluated the CNN models. The report describes each part.
 
@@ -83,7 +83,7 @@ This was a group project. I (Brunda Varshini Katapalli) built the **React fronte
 - **Pretrained backbones:** MobileNetV2, EfficientNetB0 and ResNet50V2 with ImageNet weights, via Keras.
 - **Face tracking in the browser:** [MediaPipe](https://developers.google.com/mediapipe).
 
-## Notes and limitations
+## Notes and Limitations
 
 - The login screen is a demo only. There is no real authentication, and the sample account in `App.jsx` is a placeholder.
 - The backend allows requests from any origin (`allow_origins=["*"]`) for demo convenience. Restrict it before any real deployment.
