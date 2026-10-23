@@ -1,0 +1,42 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Python environments (any name) and caches
+venv/
+venvvenv/
+fastapi/
+install/
+tensorflow/
+dlib/
+uvicorn/
+opencv-python-headless/
+__pycache__/
+*.pyc
+
+# models and data (large or separately licensed)
+*.dat
+*.keras
+*.h5
+*.bz2
+
+# secrets and local config
+.env
+.env.*
+secrets.*
+Notes.txt
+
+# build output and tests
+build/
+coverage/
+
+# personal files
+Screens.docx
+~$*
+
+# OS and logs
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
